@@ -1,0 +1,173 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{00intro}
+
+% Start Here
+\chapter{绪论}
+
+微电子硅基芯片的尺度即将到达瓶颈，是否可能存在进一步改进的可能，是否可以找到全新的替代材料？
+
+\section{半导体物理回顾}
+
+晶体结构部分
+
+\begin{itemize}
+    \item 了解并使用密勒指数
+    \item 理解基本的晶体结构
+    \item 理解量子力学的基本知识
+\end{itemize}
+
+经典的理论只能处理单电子的问题，甚至 \ce{He_2} 已经无法处理，而实际的固体存在 \(10^{-23} \text{cm}^{-3}\) 的电子密度。进一步发现了晶体的周期性，三维重复性对问题进行了简化。对硅片来说，晶圆的方向就是 \([1 0 0]\) 晶向。当晶体纯度足够高时，我们就可以在单个的原胞内部处理。
+
+当硅原子相隔较远，电子不发生交叠，均处在 \(E_1\) 能级，若是逐渐接近，能量会变化为 \(E \pm \Delta E'\) 的能带分布。若是有 \(N\) 个电子，不考虑自旋兼并度就有 \(N\) 个能带，考虑则是 \(2 N\) 个。
+
+假设我们有一块 \(N\) 原子晶体，那么能量以及相互作用的矩阵可以表示为
+
+\[
+    \left[
+        \begin{matrix}
+            E_1 & E_{12} & E_{13} & & \\
+            E_{21} & E_2 & E_{23} & &  \\
+            E_{31} & E_{32} & E_{3} & & \\
+            & & & \ddots &
+        \end{matrix}    
+    \right]
+\]
+
+但是特征值的求解几乎是不可能的，那么我们使用原胞的思想就可以块对角化，求解特征值对应的能量：
+
+
+\[
+    \left[
+        \begin{matrix}
+            [4 \times 4] & & & & \\
+            & [4\times 4] & & & \\
+            & & [4\times 4] & & \\
+            & & & \ddots &
+        \end{matrix}    
+    \right]
+\]
+
+实际上动量以及角动量对应着平移不变性以及旋转不变性。得到的 \(E-K\) 关系就是能量-动量关系。
+
+{关键方程}
+
+\begin{itemize}
+    \item 物理常数
+    \item 密勒指数
+    \item 晶面角度
+    \item 立方晶面距离
+\end{itemize}
+
+\subsection{能带结构}
+
+\begin{itemize}
+    \item 理解 \(E-K\) 关系，从中提取速度、有效质量、等能面等信息，进一步获得电流等关键量
+    \item 理解态密度，费米积分，并进行简单计算
+    \item 一定温度以及掺杂下，计算电子空穴浓度
+\end{itemize}
+
+布洛赫波函数为 \(\varphi = \phi (\vc{r}) e^{i \vc{k} \cdot \vc{r}}\)。实际中电子以波包的形式传播，其速度为群速度，与 \(E-K\) 关系斜率相关（色散关系的倒数）。
+
+综上，我们从真空电子\textbf{概率波}与晶格作用（周期势阱）得到了 \(E-K\) 关系，导出了有效质量以及群速度等关系，转换为另一个\textbf{粒子}的状态，简化问题。
+
+若是需要求解电流密度 \(\vc{J} = i \cdot n \cdot \vc{v}\) ，其中\(n\)总满足\eqref{eq:00:01}，为所有量子态的占据几率，其中 \(N(E)\) 为态密度。
+
+\begin{equation}\label{eq:00:01}
+    n = \dsum_{k = 0}^{n = N} f\left(E(\vc{k})\right) = A \int_{\vc{k}} f\left(E(\vc{k})\right) \dd{\vc{k}^3} A' \int_{E=0}^\infty f\left(E\right) N(E) \dd{E} 
+\end{equation}
+
+最终得到
+
+\[
+\begin{aligned}
+    n &= N_C e^{\frac{E_F-E_C}{k T}} \\
+    p &= N_C e^{\frac{E_V-E_F}{k T}} \\
+\end{aligned}
+\]
+
+那么 \(n \cdot p = N_C N_V e^{-\frac{E_g}{k T}} = n_i^2\) 其中 \(E_g = E_C - E_V\) 。
+
+无掺杂时， \(n = p = n_i \approx 10^{10} \text{cm}^{-3}\) 近似绝缘。有掺杂时，电中性条件为 
+
+\begin{equation}\label{eq:00:02}
+    p - n + N_D - N_A = 0
+\end{equation}
+
+
+在导带或者价带能量与费米能级相差\(3 k_B T\) 及以上时， 费米-狄拉克分布可以弱化为玻尔兹曼分布，并且可以称为简并半导体。
+
+关键方程
+
+\begin{itemize}
+    \item 不同维度的能量、动量态密度，
+    \item 费米狄拉克分布
+    \item 费米积分
+\end{itemize}
+
+\subsection{非平衡态}
+
+\begin{itemize}
+    \item 理解载流子的产生与复合
+    \item 理解载流子的扩散与漂移
+    \item 初步求解简单的少数载流子扩散方程
+\end{itemize}
+
+虽然不满足 \(n p = n_i^2\) 但是仍均匀分布在空间中。当出现扰动时，偏离稳定，通过耗散能量逐渐回到平衡态。由于电子空穴成对出现，那么在恢复稳态时有
+
+\[
+(n \pm \Delta n) \times (p \pm \Delta p) = n_i^2, \text{ where } \Delta n = \Delta p
+\]
+
+复合中心辅助的产生与复合（SRH）
+
+\begin{equation}
+    - \frac{\pp{n}}{\pp{t}}_{SRH} = - \frac{\pp{p}}{\pp{t}}_{SRH} = R_{SRH} = \frac{np - n_i^2}{\tau_p(n + n_1) + \tau_n(p + p_1)}
+\end{equation}
+
+
+\(D_P, D_N\)分别是空穴、电子的扩散系数，单位是 \(\text{cm}^2/\text{sec}\)
+
+\[\begin{array}{l}
+    \left. J _{ P }\right|_{\text {diff }}=-q D_{ P } \nabla p \\
+    J _{ N \mid \text { diff }}=q D_{ N } \nabla n
+\end{array}\]
+
+
+考虑浓度差
+
+\begin{equation*}
+    \begin{array}{l}
+        J _{N}=q n \mu_{N} E+q D_{N} \nabla n \\
+        J _{P}=q p \mu_{P} E-\left(q D_{P} \nabla p\right) 
+    \end{array}
+\end{equation*}
+
+第一项是漂移电流，第二项是扩散电流。
+
+
+漂移电流的定义 
+
+\[J_n = q n v_{drift} = q n \mu_n \mathscr{E} = n \mu_n \frac{\dd{F_n}}{\dd{x}}\]
+
+\[J_p = q p v_{drift} = q p \mu_p \mathscr{E} = p \mu_p \frac{\dd{F_p}}{\dd{x}}\]
+
+其中 \(\mu_n\) 是迁移率。
+
+关键方程
+
+\begin{itemize}
+    \item 半导体方程：连续性方程与泊松方程
+    \item 少数载流子扩散方程
+\end{itemize}
+
+
+% End Here
+% 
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
