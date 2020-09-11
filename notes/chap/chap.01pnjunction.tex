@@ -1,0 +1,58 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{01pnjunction}
+
+% Start Here
+\chapter{PN 结}
+
+\begin{introduction}
+    \item 什么是 PN 结
+    \item 平衡态能带图
+    \item 外加电压
+\end{introduction}
+
+PN 结是其他微电子器件的基础。
+
+PN 结的常见应用有：太阳能电池，GaAs / GaN 激光器，有机发光二极管，雪崩光电二极管，CMOS 图像传感器。OLED 是有机半导体的显示材料，怕水，寿命有限。
+
+\section{PN 结的形成}
+
+PN 结最早是通过热扩散，目前有沉积、扩散、激光掺杂等工艺。
+
+一般掺杂得到的是二维的器件，电流方向不是直线，难以求解。若是得到的是一个很窄的器件，可以简化为一个一维问题，对第二个维度的依赖性会变低，只需考虑第一维度的运动情况。
+
+两种半导体直接相连是不能得到 PN 结的，因为断面上的原子不能形成化学键。对 N 型半导体，费米能级靠近导带，对于 P 型半导体，靠近价带。在两个体区中， N 型中很多的施主杂质电离的正离子（无法移动），但是有等量的电子（可以移动， \(n = N_D\)）；类似的 P 型存在可以移动的空穴（\(p = N_A\)）。浓度差造成了扩散，那么 N 型靠近结区的部分电子被中和，整体带正电，P 型对应部分带负电，这就是耗尽区。由于扩散的存在，出现 \(n \cdot p > n_i^2\) 的瞬态。
+
+电流分为两部分，漂移电流以及扩散电流。之前考虑的是扩散电流，因为此时还没有出现两部分的电势差。由于扩散后出现了静电荷，形成了电场，开始考虑漂移电流。电场逐渐增大，受到的阻力也越来越大，直到扩散电流与漂移电流相互抵消，进入稳态，即完成形成过程。
+
+可以分为两个体区以及耗尽区（空间电荷区），耗尽区中没有自由移动的电荷， N 型一侧有 \(n \ll n_0\)，另一侧有 \(p \ll p_0\) 。
+
+\(E_c(x)\) 如\figref{01pnjunction:fig0201}
+
+\qfig[fig0201]{0201.png}{\(E_c(x)\)变化}
+
+\(n(x)\) 满足 \[n(x) = N_c \exp(-\frac{E_c(x)-E_F}{k T})\] 
+
+其中， \(E_c - E_F \approx 0.06 eV\)， \(k T \approx 26 meV\)。
+
+依靠本式，得到，空间电荷区几乎没有自由电荷。最后的分布如\figref{01pnjunction:fig0202}
+
+\qfig[fig0202]{0202.png}{PN 结区域}
+
+形成的电场为均匀变化，最大值为 
+
+\[E_{max} = \frac{q}{K_s \epsilon_0} x_p N_A = \frac{q}{K_s \epsilon_0} x_n N_D\]
+
+可以得到对应的电势以及能带图，
+
+
+
+% End Here
+
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
