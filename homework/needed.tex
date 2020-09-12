@@ -21,7 +21,7 @@
       \centering
       \includegraphics[width=0.6\textwidth]{#2}
       \caption{#3}
-      \label{\chapname :#1}
+      \label{no :#1}
   \end{figure}
 }
 
@@ -29,3 +29,24 @@
 \renewcommand\arraystretch{1.5}
 
 % 日期
+
+\newcommand{\homep}[1]{\section*{Problem #1}}
+
+
+% MATLAB 代码块环境
+
+% \usepackage{ctex}
+\usepackage[numbered,framed]{matlab-prettifier}
+
+\lstset{
+  language = octave,
+  style = Matlab-editor,
+  basicstyle = \mlttfamily,
+  escapechar = ",
+  mlshowsectionrules = true,
+}
+% 
+% \newenvironment{ocode}{\begin{lstlisting}[language=octave]}{\end{lstlisting}}
+
+\lstnewenvironment{ocode}[1][]{%
+    \lstset{language=octave,#1}}{}%
