@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  11 SEP 2020 11:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  18 SEP 2020 11:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,35 +1290,47 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
 
 ]
-
-LaTeX Warning: Reference `01pnjunction:fig0202' on page 2 undefined on input line 41.
-
 File: ../figure/0202.png Graphic file (type bmp)
 <../figure/0202.png>
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+File: ../figure/0203.png Graphic file (type bmp)
+<../figure/0203.png>
+ [2] [3] [4]
+LaTeX Font Info:    Trying to load font information for T1+ntxsups on input line 168.
+ (/opt/texlive2020/texmf-dist/tex/latex/newtx/t1ntxsups.fd
+File: t1ntxsups.fd 2015/01/17 v1.0
+)
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 10.95pt on input line 168.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 168.
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 9.0pt on input line 168.
+File: ../figure/0204.png Graphic file (type bmp)
+<../figure/0204.png>
+File: ../figure/0205.png Graphic file (type bmp)
+<../figure/0205.png>
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 186.
+ [5]
+File: ../figure/0206.png Graphic file (type bmp)
+<../figure/0206.png>
+ [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
  (./chap.01pnjunction.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 232.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
 Package rerunfilecheck Info: File `chap.01pnjunction.out' has not changed.
-(rerunfilecheck)             Checksum: 2FC4AF9755FE0A8DC420F7D2B4E817DC;207.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 77BCC66EF37BCE6CABC7D79E4F24E6D8;735.
  )
-(\end occurred when \ifx on line 48 was incomplete) 
+(\end occurred when \ifx on line 231 was incomplete) 
 Here is how much of TeX's memory you used:
- 39084 strings out of 479682
- 817171 string characters out of 5891585
+ 39220 strings out of 479682
+ 821288 string characters out of 5891585
  1443281 words of memory out of 5000000
- 55561 multiletter control sequences out of 15000+600000
- 564776 words of font info for 92 fonts, out of 8000000 for 9000
+ 55675 multiletter control sequences out of 15000+600000
+ 578247 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  69i,12n,126p,922b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chap.01pnjunction.pdf (2 pages).
+Output written on chap.01pnjunction.pdf (6 pages).

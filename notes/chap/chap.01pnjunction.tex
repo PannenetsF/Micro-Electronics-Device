@@ -46,10 +46,187 @@ PN 结最早是通过热扩散，目前有沉积、扩散、激光掺杂等工�
 
 \[E_{max} = \frac{q}{K_s \epsilon_0} x_p N_A = \frac{q}{K_s \epsilon_0} x_n N_D\]
 
-可以得到对应的电势以及能带图，
+可以得到对应的电势以及能带图。
+
+\section{平衡态能带图}
+
+\qfig[fig0203]{0203.png}{电场\(E\)变化}
+
+分析空间电荷区电势在施主区的能级：
+
+\[N_D = n = N_C \exp (\frac{E_i-E_C}{kT})\]
+
+解得 
+
+\[\log (\frac{n}{N_C}) = - \frac{E_C - E_i}{kT}\]
+
+那么
+
+\[E_C = - k T \log(\frac{n}{N_C}) + E_i\]
+
+同理
+
+\[N_A = p = N_V \exp (- \frac{E_i - E_V}{kT})\]
+
+\[E_V = E_i + k T \log(\frac{p}{N_V}) \]
+
+带隙为 \[E_g = E_C - E_V = - k T \log(\frac{n_i^2}{N_C N_V})\]
+
+而 
+
+\[np = N_C N_V \exp (- \frac{E_g}{kT})\]
+
+\[E_g = -k T\log(\frac{np}{N_C N_V})\]
+
+内建电势满足 \[V_{bi} = E_g - (E_F - E_V) - (E_{C,otherside} - E_F)\]
+
+\[V_{bi} =  = V_g + kT\log(\frac{N_C}{N_D}) + kT \log (\frac{N_V}{N_A}) = \frac{kT}{q} \log(\frac{N_A N_D}{n_i^2})\]
+
+
+\section{耗尽近似：泊松方程解析解}
+
+
+泊松方程是静电变量的出发点，适用于三维的公式为
+
+\[\nabla \cdot E = \frac{\rho}{K_S \epsilon_0}\]
+
+杂质分布为，其中 \(\rho = q (p - n + N_D - N_A)\)
+
+\[
+    \begin{aligned}
+        \frac{\dd{E}}{\dd{x}} = - \frac{\rho}{\epsilon_r} = \frac{\rho}{K_s \epsilon_0} 
+    \end{aligned}
+\]
+
+那么 \[\begin{aligned}
+    E(x) =& \int - \frac{q N_D}{\epsilon_r} \dd{x} \\
+    =& -\frac{q N_D}{\epsilon_r} x
+\end{aligned}\]
+
+
+多次掺杂需要浓度的提升。
+
+\section{耗尽区的长度}
+
+在突变近似以及耗尽近似下，
+
+\[\frac{\dd{E}}{\dd{x}} = \left\{\begin{aligned}
+    - q N_A / K_S \epsilon_0, &\quad -x_p \leq x \leq 0 \\
+    q N_D / K_S \epsilon_0, &\quad 0 \leq x \leq x_n \\
+    0, &\quad else 
+\end{aligned}\right.\]
+
+得到 
+
+\[E(x) = \left\{
+\begin{aligned}
+    - \frac{q N_A}{K_S \epsilon_0} (x_p + x), &\quad -x_p \leq x \leq 0 \\
+    - \frac{q N_D}{K_S \epsilon_0} (x_n - x), &\quad 0 \leq x \leq x_n 
+\end{aligned}    
+\right.\]
+
+为了满足\(x = 0\)的电场连续性，得到 
+
+\[N_A x_p = N_D x_n\]
+
+求解电势，电势满足 \(E = -\dd{V}/\dd{x}\)
+
+设置 p 型区边缘的电势为参考电势 \(0\) ，那么在 n 型区边缘的电势为 \(V_{bi}\)，那么交界处的电势一致：
+
+\[V_{bi} - \frac{q N_D}{2 K_S \epsilon_0}x_n^2 = \frac{q N_A}{2 K_S \epsilon_0}x_p^2\]
+
+得到
+
+\[x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_D}{N_A(N_A+N_D)}\right)\right]\]
+\[x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_A}{N_D(N_A+N_D)}\right)\right]\]
+\[W = x_n + x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_A + N_D}{N_AN_D}\right)\right]^{1/2}\]
+
+\section{外加电压}
+
+正向偏置是指的增加正向电压，使得正电压一端中性区费米能级下降，引起导带价带下降，这样也引起了 \(V_{bi}\) 的下降（平移）。费米能级下降的幅度为外加电压的大小。
+
+\[V_{bi}' = V_{bi} - V_A\]
+
+对原有的耗尽宽度的改进可以直接将 \(V_{bi}\) 替换为 \(V_{bi}'\) 。
+
+若是反向，在 n 型区使得费米能级降低，内建电势 \(V_{bi}\) 会上升，其峰值电场强度会明显增强。
+
+反向偏置的 PN 结可以作为电容。
+
+PN 结的连续性方程：
+
+\[
+    \begin{aligned}
+        \nabla \cdot E&=q\left(p-n+N_{D}^{+}-N_{A}^{-}\right.\\
+        \frac{\partial n}{\partial t}&=\frac{1}{q} \nabla \bullet \mathrm{J}_{N}-r_{N}+g_{N}\\
+        \mathbf{J}_{N}&=q n \mu_{N} E+q D_{N} \nabla n\\
+        \frac{\partial p}{\partial t}&=\frac{1}{q} \nabla \cdot \mathbf{J}_{p}-r_{P}+g_{P}\\
+        \mathbf{J}_{P}&=q p \mu_{P} E-q D_{P} \nabla p
+        \end{aligned}
+\]
+
+添加外场后（正向），如 ~\figref{\chapname :0204}。由于结区较短，产生复合未达到平衡，因此不满足 \(n p = n_i^2\)，但是电子 / 空穴内部达到平衡，因此产生一种\textbf{准费米能级}，分别描述两种粒子的状态。\footnote{子系统平衡时间为 ps ，整体平衡为 \(\mu\)s - ms 的量级} 平衡时，电子空穴的准费米能级是重合的。\figref{\chapname :0205}。
+
+\qfig[0204]{0204.png}{外加电压后的能级图}
+
+\qfig[0205]{0205.png}{外加电压后的准费米能级图}
+
+假设外加直流电压，在中性区中没有产生与复合，且 \(n\) 为常数，因此 \(\nabla \cdot \mathbf{J} = 0\) 。
+
+对于 N 区空穴来说，浓度极低，只需考虑 \(J_{P} = - q D_p \nabla p\) ，需要注意 \(p\) 的梯度，也就是只有扩散电流。而电流处处相等，另一区的总电流总是和这一侧的扩散相等的。
+
+那么总电流
+
+\[I = J_{P(N)} + J_{N(N)} = J_{P(n),D} + J_{N(n),D,D} = J_{P(n), D} + J_{N(p),D}\]
+
+假设电流是常数，那么 \(\nabla \cdot J = 0\) ：
+
+又
+
+\[J_N = q D_N \nabla \cdot n, \text{ where } n = n_0 + \Delta n\]
+
+\[\nabla^2 \cdot \Delta n = 0\]
+
+因此 
+
+\[\Delta n = A \cdot x + B\]
+
+由边界条件，坐标系如\figref{\chapname :0206}
+
+\qfig[0206]{0206.png}{坐标系建立}
+
+\[\Delta n = A(x - L) \]
+
+\[n(0) = N_C \exp(- \frac{E_C(0) - E_F}{k T}), \text{ where } E_C(0) = E_C + V_{bi} - V_A\]
+
+那么
+
+\[n(0) = N_C \exp(-\frac{E_C-E_F}{kT}) \exp(-\frac{V_{bi}}{kT}) \exp(\frac{V_A}{kT}) = \frac{n_i^2}{p}\exp(\frac{V_A}{kT}) = n_{0,p}\exp(\frac{V_A}{kT})\]
+
+那么 
+
+\[\Delta n = n_{0,p}(\exp(\frac{V_A}{kT}) - 1)\]
+
+假设存在一个线性的变化，到电极处 \(\Delta n = 0\) 存在一个线性的改变。
 
 
 
+\section*{\(V_{bi}\) 推导}
+
+由于 
+
+\[n = N_C \exp(- \frac{E_C - E_F}{k T})\] 
+
+对于 \(E_C\) 最低处为 \(n_1\) 另一侧为 \(n_2\) ，那么
+
+\[
+\begin{aligned}
+    n_1 &= N_D \\
+    n_2 &= \frac{n_i^2}{N_A} \\
+    \frac{n_1}{n_2} &= \exp(\frac{E_{C,2} - E_{C,1}}{k T}) \\
+    \log (N_A N_D / n_i^2) &= \frac{V_{bo}}{k T}
+\end{aligned}    
+\]
 % End Here
 
 \let\chapname\undefined
