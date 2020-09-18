@@ -1,0 +1,131 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear]{elegantpaper}
+\usepackage{pifont}
+\usepackage{bbding}
+\input{needed.tex}
+
+\title{微电子器件物理\quad 第二周作业}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：
+
+1，阅读《半导体器件基础》第五章 done
+
+2，使用E5.1和E5.3的程序，画出图E5.1和E5.3 done
+
+3、使用E5.4的程序，画图3种情况下的能带图done
+
+4、修改E5.4的程序，利用subplot函数，使之可以画出掺杂浓度、净电荷、电场、电势随着位置的关系图（类似图5.9）done
+
+5、修改E5.4的程序，使之可以画出施加不同偏压之后的能带图 done
+
+6、课后作业：5.1、5.2、5.3、5.4
+
+\tableofcontents
+
+% Start Here
+
+\homep{E5.1 E5.3}
+
+\homep{E5.4}
+
+\homep{5.1}
+
+a) \XSolidBrush % why
+ b) \Checkmark c) \XSolidBrush d)\Checkmark e)\Checkmark f)\XSolidBrush g) \Checkmark h) \Checkmark i) \XSolidBrush j) \Checkmark 
+
+\homep{5.2}
+
+\subhome{a}
+
+\[p = N_V \exp(\frac{E_i-E_F}{kT})\]
+
+如 \figref{no :01} 。
+\qfig[01]{h201.png}{5.2 能带}
+
+\subhome{b}
+
+\[E_F = E_V - 2 k T = E_C - E_G / 4\]
+
+\[E_C + V_{bi} q = E_V + E_G\]
+
+联立
+
+\[V_{bi} = \frac{3}{4}E_G + 2 k T\]
+
+\homep{5.3}
+
+\subhome{a}
+
+
+如 \figref{no :02} 。
+\qfig[02]{h202.png}{5.3 能带}
+
+\subhome{b}
+
+内建电势满足
+
+\[V_{bi} q = E_{V1} - E_{V2} \]
+
+而 
+
+\[N_{A1} = p = N_V \exp (- \frac{E_i - E_{V1}}{kT})\]
+
+\[N_{A2} = p = N_V \exp (- \frac{E_i - E_{V2}}{kT})\]
+
+\[\frac{N_{A1}}{N_{A2}} = \exp(\frac{V_{bi}q}{kT})\]
+
+那么 
+
+\[V_{bi} = \log(\frac{N_{A1}}{N_{A2}}) \frac{kT}{q}\]
+
+\subhome{c}
+
+如\figref{no :03} 。
+\qfig[03]{h203.png}{5.3 电场、电势、电荷}
+
+\subhome{d}
+
+耗尽近似对结区只考虑电离杂质，对远离结区部分认为其平衡，总电荷密度为 0 。
+
+\subhome{e}
+
+静电变量表示为： 
+
+\[\rho =  q (p - n + N_D - N_A)\]
+
+
+如\figref{no :04} 。
+\qfig[04]{h204.png}{5.3 静电变量}
+
+在远离结区的部分：\(\rho = q \cdot p\)
+
+在结区： \(\rho = q (p - N_A)\)
+
+
+不适用于耗尽近似，因为在结区没有发生两种载流子的耗尽。
+
+\homep{5.4}
+
+
+\[V_{bi} = \frac{kT}{q} \log(\frac{N_A N_D}{n_i^2}) = 0.61316 V\] 
+
+
+\[x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_D}{N_A(N_A+N_D)}\right)\right] = 0.000073002 cm\]
+
+\[x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_A}{N_D(N_A+N_D)}\right)\right] = 0.000036501 cm\]
+
+\[W = x_n + x_p = \left[\frac{2 K_S \epsilon_0}{1} \left(\frac{N_A + N_D}{N_AN_D}\right)\right]^{1/2} = 0.00010950 cm \]
+
+
+\[E(0) = - \frac{q N_D}{K_S \epsilon_0} (x_n) = 11198.88614 V/cm \]
+
+\[V(0) = - \frac{q N_A}{K_S \epsilon_0} \frac{1}{2} x_p^2 = 0.20439 V\]
+% End Here
+
+\end{document}
