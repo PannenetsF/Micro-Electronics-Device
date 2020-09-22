@@ -210,6 +210,34 @@ PN 结的连续性方程：
 假设存在一个线性的变化，到电极处 \(\Delta n = 0\) 存在一个线性的改变。
 
 
+在无偏置时，扩散电子以及漂移电子可以动态平衡。正向偏置后漂移电子增多，扩散电子减少。
+
+根据结区的电子浓度以及平衡区的电子浓度计算分布，并进行线性近似
+
+正向偏置有 
+
+\[\ln J_T \approx q V_A / k_B T + \ln const\]
+
+\[J_T = -q [\frac{D_n}{W_p}\frac{n_i^2}{n_A} + \frac{D_p}{W_n} \frac{n_i^2}{N_D}] (e^{qV_A \beta} - 1)\]
+
+反向偏置有
+
+\[J_T \approx const\]
+
+反向偏置时：
+
+\[n' = N_C \exp(-\frac{E_C - E_F}{kT}) = N_C \exp(-\frac{E_O + V_{bi} - V_A - E_F}{kT})\]
+
+结区有
+
+\[\frac{N_D N_A}{n_i^2} = \exp(\frac{V_{bi}}{kT}) \frac{n_i^2}{N_A}\]
+% End Here
+
+
+那么 
+
+\[n' = \frac{n_i^2}{N_A} \exp(\frac{V_A}{kT})\]
+
 
 \section*{\(V_{bi}\) 推导}
 

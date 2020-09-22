@@ -1,0 +1,74 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{02pnjvi}
+
+% Start Here
+\chapter{PN 结交流特性}
+
+电容的本质是电荷随电压变化。 PN 结也是电容，并且是一个可变电容。对 PN 结来说结电容占主导，扩散电容较少。
+
+\section{正向导通电导}
+
+\[I = I_0 (\exp(q(V_A-R_S I)\beta / m) - 1) \]
+
+其中 \(m\) 是非理想因子。
+
+\[\ln \frac{I+I_0}{I_0} = q(V_A - R_S I) \frac{\beta}{m}\]
+
+\[\frac{1}{R} = \frac{\dd{I_A}}{\dd{V_A}}\]
+
+\section{结电容}
+
+结区宽度满足
+
+\[W \propto \sqrt{V_{bi} - V_A}\]
+
+那么随着小信号的增大，空间电荷区变窄，p 区费米能级下降；
+减小则空间电荷区变宽，p 区费米能级上升。
+
+那么外加小信号 \(V_{AC}\) 后势垒也随之变化，
+
+
+计算流程为
+
+\[V_{AC} \rightarrow \Delta V_{bi} \rightarrow \Delta W \rightarrow \Delta Q = \Delta W_n N_D\]
+
+\[C = \frac{\Delta Q}{V_{AC}}\]
+
+若是看成平板电容器
+
+\[C = \frac{\epsilon_r \epsilon_0 A}{(W_n + W_p)}\] 
+
+\(A\) 是结面积。由于宽度由直流偏置决定，因此这是一个可变电容。
+
+
+\section{多数载流子}
+
+运动速度为 ps 量级，决定结区的性质。
+
+\section{内建电势}
+
+\[\frac{1}{C_j^2} \approx \frac{2}{q N_D(x) K_s \epsilon_0 A^2}(V_{bi} - V_A)\]
+
+
+\section{少数载流子}
+
+少数载流子决定扩散电容。
+
+\[J_N = q n \mu_N E + q D_N \frac{\dd{n}}{\dd{x}}\]
+
+\[\frac{\pp{n}}{\pp{t}} = \frac{1}{q}\frac{\dd{J_n}}{\dd{x}}-r_N + g_N\]
+
+\[\frac{\pp{(n_0 + \Delta n_{dc} \Delta n_{ac} e^{j \omega t})}}{\pp{t}} = D_N \frac{\dd{^2 (n_0 + \Delta n_{dc} \Delta n_{ac} e^{j \omega t})}}{\dd{x^2}} - \frac{\Delta n_{dc} + \Delta n_{ac} e^{j\omega t}}{\tau_n}\]
+
+少数载流子的变化在微秒级。
+
+
+\section{数字电路中的应用}
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
