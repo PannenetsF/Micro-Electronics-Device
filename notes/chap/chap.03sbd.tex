@@ -1,0 +1,42 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{03sbd}
+
+% Start Here
+\chapter{肖特基二极管}
+
+也可以叫做金属半导体二极管，具有和 PN 结类似的整流功能。
+
+\section{能带图}
+
+\(\Phi_B\) 称为肖特基势。
+
+描述金属只需要一个参数即 \(E_F\) 来描述。在接触边界需要能级的弯曲。
+
+肖特基结瞬态响应更快，电流承载力更大。
+
+\section{电流}
+
+\[J_T(V_A) = J_{s-m}(0) - J_{s-m}(V_A)\]
+
+而 
+
+\[\begin{aligned}
+    J_{s-m} &= q n v \\ 
+    &= \int_{E>E'}^\infty -q \text{DOS}(E) f(E)\dd{E} \\
+    &= -\frac{ N_S}{2} \exp(-\frac{E_c + E'-V_A - E_F-}{kT}) V q \\ 
+    &= -\frac{ N_S}{2} \exp(-\frac{V_{bi} - V_A}{kT}) V q \\ 
+    &= I_0 \exp(\frac{V_A}{kT})
+\end{aligned}\]
+
+肖特基是多数载流子导电的器件。
+
+% End Here
+
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
