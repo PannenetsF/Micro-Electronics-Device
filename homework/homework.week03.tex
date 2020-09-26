@@ -1,0 +1,138 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear]{elegantpaper}
+
+\input{needed.tex}
+
+\title{微电子器件物理\quad 第三周作业}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：pn结作业（见hw03-pnjunction.pdf）
+
+\homep{1}
+
+\subhome{a}
+
+\[V_{bi} = \frac{kT}{q}\ln \frac{N_A N_D}{n_i^2} =  0.59524 V\]
+
+\subhome{b}
+
+\[x_p = x_n = \left[\frac{2 K_s \epsilon_0}{q} \frac{N_A}{N_D(N_A + N_D)}\right]^{1/2} = 0.000062291 cm\] 
+
+\[W = x_n + x_p = 0.00012458 cm\]
+
+\subhome{c}
+
+\[V(x = 0) = \frac{q N_A}{2K_S \epsilon_0} x_p^2 = 0.29762 V\]
+
+\[E(x=0) = - \frac{q N_A}{K_S \epsilon_0} x_p = -9555.8 V/cm\]
+
+\subhome{d}
+
+如 \figref{1d} 
+
+\qfig[1d]{h301.png}{草图}
+
+\homep{2}
+
+\subhome{a}
+
+\[V_{bi} = \frac{kT}{q}\ln \frac{N_A N_D}{n_i^2}\]
+
+\[W \approx \left[\frac{2K_S\epsilon_0}{q} \frac{1}{N_D}V_{bi}\right]\]
+
+\[E(0) = - \frac{q N_A}{K_S \epsilon_0} \left[\frac{2K_S \epsilon_0}{q}\frac{N_D}{N_A^2}\right]^{1/2}\]
+
+\[V(x) = \left\{ \begin{aligned}
+    &\frac{q N_A}{2 K_S \epsilon_0} (x+[\frac{2K_S\epsilon_0}{q} \frac{N_D}{N_A^2}V_{bi}]^{1/2})^2  \\
+    &V_{bi}-\frac{q N_D}{2 K_S \epsilon_0} (-x+[\frac{2K_S\epsilon_0}{q} \frac{1}{N_D}V_{bi}]^{1/2})^2 
+\end{aligned} \right.\]
+
+\[\rho(x) = -q N_A, \text{ if } -x_p \leq x \leq 0; 0 \text{ else}\]
+
+\subhome{b}
+
+
+\[V_{bi} = \frac{kT}{q}\ln \frac{N_A N_D}{n_i^2} =  0.83334V\]
+
+\subhome{c}
+
+\[x_n = \left[\frac{2 K_s \epsilon_0}{q} \frac{N_A}{N_D(N_A + N_D)}\right]^{1/2} = 0.00010423 cm\]
+
+\[x_p = \frac{N_D}{N_A} x_n = 0.000000010423 cm\]
+
+\[W = x_n + x_p = 0.00010424 cm\]
+
+\subhome{d}
+
+\[V(x=0) = \frac{q N_A }{2 K_S \epsilon_0} x_p^2 = 0.000083325 V\]
+
+\[E(x=0) = - \frac{qN_A}{K_S \epsilon_0}x_p = -15989.04177 V/cm\]
+
+\subhome{e}
+
+如 \figref{2e}
+
+\qfig[2e]{h302.png}{草图}
+
+\homep{3}
+
+\subhome{a}
+
+\[\rho = \left\{
+\begin{aligned}
+    q N_D , & -x_n \leq x \leq 0\\
+    0, & 0 \leq x \leq x_i\\ 
+    -q N_A, & x_i \leq x \leq x_i + x_p 
+\end{aligned}    
+\right.\]
+
+如 \figref{3a}，由于掺杂浓度差距过大，图中大小仅作示意，不为真实大小。
+
+\qfig[3a]{h303.png}{电场}
+
+电场大小表示为 
+
+\[
+E = \left\{
+\begin{aligned}
+    \frac{q N_D}{K_S \epsilon_0} (x+x_n), & -x_n \leq x \leq 0 \\
+    \text{const}, & 0 \leq x \leq x_i \\ 
+    -\frac{q N_A}{K_S \epsilon_0} (x - x_i - x_p), & x_i \leq x \leq x_i + x_p
+\end{aligned}    
+\right.    
+\]
+
+连续性得到：\(x_n N_D = x_p N_P\) 
+
+设在 P 侧中性区电势为 \(0\) ，那么 N 侧的中性区电势为 \(V_{bi}\) 。由于 \(x_p > x_i\) 近似忽略后者。
+
+\[V_{bi} = \frac{1}{2} (x_i + x_i + x_n + x_p) \cdot \frac{q N_A x_p}{K_S \epsilon_0} \approx (\frac{N_A + N_D}{2 N_D}) \frac{q N_A}{K_S \epsilon_0} x_p^2 \approx \frac{N_A q}{2 K_S \epsilon_0} x_p^2 \]
+
+解得 \(x_p = \sqrt{\frac{2 K_S \epsilon_0 V_{bi}}{N_A q}}\)
+
+\subhome{c}
+
+由电场表示\figref{3a}可知本征层的存在扩展了电场最大值的空间，增大了 \(V_{bi}\)
+
+\subhome{d}
+
+最大电场大小没有变化，但是分布变广了。
+
+
+
+
+
+
+
+% \tableofcontents
+
+% Start Here
+
+% End Here
+
+\end{document}

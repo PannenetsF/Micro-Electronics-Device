@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  24 SEP 2020 13:36
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  26 SEP 2020 16:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/pannenetsf/Documents/Subjects/md/homework/homework.week02
-(/home/pannenetsf/Documents/Subjects/md/homework/homework.week02.tex
+**/home/pannenetsf/Documents/Subjects/md/homework/homework.week03
+(/home/pannenetsf/Documents/Subjects/md/homework/homework.week03.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-09-06> (/opt/texlive2020/texmf-dist/tex/latex/elegantpaper/elegantpaper.cls
 Document Class: elegantpaper 2020/04/12 v0.09 ElegantLaTeX Paper class
@@ -678,18 +678,7 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 ) (/opt/texlive2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)) (/opt/texlive2020/texmf-dist/tex/latex/psnfss/pifont.sty
-Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
-LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
- (/opt/texlive2020/texmf-dist/tex/latex/psnfss/upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
-)
-LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
- (/opt/texlive2020/texmf-dist/tex/latex/psnfss/upsy.fd
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/opt/texlive2020/texmf-dist/tex/latex/bbding/bbding.sty
-Package: bbding 1999/04/15 v1.01 Dingbats symbols
-) (./needed.tex (/opt/texlive2020/texmf-dist/tex/latex/matlab-prettifier/matlab-prettifier.sty
+)) (./needed.tex (/opt/texlive2020/texmf-dist/tex/latex/matlab-prettifier/matlab-prettifier.sty
 Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab source code
 \netBracketCount@mlpr=\count346
 \blkLvl@mlpr=\count347
@@ -700,31 +689,31 @@ Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab s
 \toks@mlpr=\toks34
 ) (/opt/texlive2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)) (./homework.week02.aux)
-\openout1 = `homework.week02.aux'.
+)) (./homework.week03.aux)
+\openout1 = `homework.week03.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 10.
  (/opt/texlive2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/opt/texlive2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -734,12 +723,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count349
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
- (./homework.week02.out) (./homework.week02.out)
+LaTeX Info: Redefining \ref on input line 10.
+LaTeX Info: Redefining \pageref on input line 10.
+LaTeX Info: Redefining \nameref on input line 10.
+ (./homework.week03.out) (./homework.week03.out)
 \@outlinefile=\write4
-\openout4 = `homework.week02.out'.
+\openout4 = `homework.week03.out'.
 
 
 *geometry* driver: auto-detecting
@@ -780,7 +769,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 11.
+LaTeX Info: Redefining \selectfont on input line 10.
 \c@mv@tabular=\count350
 \c@mv@boldtabular=\count351
  (/opt/texlive2020/texmf-dist/tex/latex/footmisc/footmisc.sty
@@ -797,18 +786,18 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
 )
 \c@lstlisting=\count353
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 13.
+(Font)              scaled to size 17.28pt on input line 12.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 13.
+(Font)              scaled to size 17.28pt on input line 12.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 13.
+(Font)              scaled to size 12.0pt on input line 12.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 13.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+(Font)              scaled to size 10.0pt on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
  (/opt/texlive2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
  (/opt/texlive2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -829,52 +818,43 @@ Package fontspec Info: Font family 'FandolKai-Regular(0)' created for font
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
+(Font)              scaled to size 14.4pt on input line 16.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 29.
-(./homework.week02.toc)
-\tf@toc=\write5
-\openout5 = `homework.week02.toc'.
-
-LaTeX Font Info:    Trying to load font information for U+ding on input line 51.
- (/opt/texlive2020/texmf-dist/tex/latex/bbding/Uding.fd
-File: Uding.fd 1996/02/01 v1.0 BBding font definitions
-)
+(Font)              scaled to size 14.4pt on input line 16.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 56.
+(Font)              scaled to size 12.0pt on input line 18.
+File: figure/h301.png Graphic file (type bmp)
+<figure/h301.png>
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 60.
-File: figure/h201.png Graphic file (type bmp)
-<figure/h201.png>
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 61.
- [1
+(Font)              scaled to size 10.0pt on input line 38.
+[1
 
 ]
-File: figure/h202.png Graphic file (type bmp)
-<figure/h202.png>
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 55.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 55.
+File: figure/h302.png Graphic file (type bmp)
+<figure/h302.png>
+File: figure/h303.png Graphic file (type bmp)
+<figure/h303.png>
  [2]
-File: figure/h203.png Graphic file (type bmp)
-<figure/h203.png>
-File: figure/h204.png Graphic file (type bmp)
-<figure/h204.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
  [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
- (./homework.week02.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
-Package rerunfilecheck Info: File `homework.week02.out' has not changed.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
+ (./homework.week03.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package rerunfilecheck Info: File `homework.week03.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 21561 strings out of 479682
- 415555 string characters out of 5891585
- 952420 words of memory out of 5000000
- 38431 multiletter control sequences out of 15000+600000
- 571926 words of font info for 88 fonts, out of 8000000 for 9000
+ 21328 strings out of 479682
+ 409903 string characters out of 5891585
+ 954420 words of memory out of 5000000
+ 38220 multiletter control sequences out of 15000+600000
+ 573903 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 69i,6n,126p,865b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,10n,126p,846b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.week02.pdf (4 pages).
+Output written on homework.week03.pdf (3 pages).
