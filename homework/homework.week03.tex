@@ -123,10 +123,85 @@ E = \left\{
 
 最大电场大小没有变化，但是分布变广了。
 
+\homep{4}
+
+\[I_0 = q A (\frac{D_N}{L_N} \frac{n_i^2}{N_A} + \frac{D_p}{L_p}\frac{n_i^2}{N_D})\]
+
+\[L = \sqrt{\tau D}, \frac{D}{\mu} = \frac{k T}{q}\]
+
+\[I = I_0 (\exp(a V_A / k T) - 1)\]
+
+带入 MATLAB 
+
+\begin{lstlisting}
+T=300;        % Temperature in Kelvin
+k=8.617e-5;   % Boltzmann constant (eV/K)
+e0=8.85e-14;  % permittivity of free space (F/cm)
+q=1.602e-19;  % charge on an electron (coul)
+KS=11.8;      % Dielectric constant of Si at 300K
+ni=1.0e10;    % intrinsic carrier conc. in Silicon at 300K (cm^-3)
+EG=1.12;      % Silicon band gap (eV) 
+
+NA = 1e16;
+ND = 1e19;
+
+NDref = 1.3e17;
+NAref = 2.35e17;
+unmin = 92;
+upmin = 54.3;
+un0 = 1268;
+up0 = 406.9;
+an = 0.91;
+ap = 0.88;
+
+un = unmin + un0 / (1 + (ND/NDref)^an);
+up = upmin + up0 / (1 + (NA/NAref)^ap);
+
+Dn = k * T * un;
+Dp = k * T * up;
+
+tp = 1e-6;
+tn = tp;
+
+Ln = sqrt(tn * Dn);
+Lp = sqrt(tp * Dp);
+
+J0 = q * (Dn*ni^2/Ln/NA + Dp*ni^2/Lp/ND);
 
 
+Vbi=k*T*log((NA*ND)/ni^2); 
+xN=sqrt(2*KS*e0/q*NA*Vbi/(ND*(NA+ND)));    % Depletion width n-side
+xP=sqrt(2*KS*e0/q*ND*Vbi/(NA*(NA+ND)));    % Depletion width p-side
+
+W = xN + xP;
+
+J = J0 * e^(VA / k / T) - J0
+\end{lstlisting}
+
+在 0.5， 0.6， -0.5， -0.6 分别得到 0.00069784，0.033400，-2.7784e-12，-2.7784e-12
 
 
+\homep{5}
+
+\subhome{a} 正偏，存在少子的积累问题。
+
+\subhome{b} \(N_A = 1e16 cm^{-3}\)
+
+\subhome{c} \(N_D = 1e14 cm^{-3}\)
+
+\subhome{d} \(n_i^2 = 1e23 cm^{-6}, n_i = 3.1623e11 cm^{-3}\)
+
+\subhome{e} \(np = n_i^2 \exp (q V_A/kT)\) 即 \(1e26 = 1e20 \exp (V_A / 0.026)\)，\(V_A = 0.6 V\)
+
+\homep{6}
+
+\subhome{a} 正偏，空穴的能量相对变高了。
+
+\subhome{b} 即费米能级的偏移，\(0.5 V\)
+
+\subhome{c} 带隙为导带价带的差距，\(1.25 eV\)
+
+\subhome{d} 内建电势为 \(0.25 eV\)
 
 
 % \tableofcontents
