@@ -1,0 +1,61 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{04mos}
+
+% Start Here
+\chapter{MOS 管}
+
+
+\section{MOS 的基本结构}
+
+MOS 由源极漏极栅极和衬底构成。源漏为 n 型则为 nMOS， 为 p 型则为 pMOS 。
+
+\section{MOS 的平衡能带图}
+
+为了使得费米能级连续，接触处的能带下拉，由于氧化物是刚性下拉，另一侧也下降。
+
+\[\frac{p}{p'} = \exp(\frac{\phi_S}{kT})\] 
+
+
+\section{理想 MOS 电容}
+
+通过外接电压，使得氧化物能级变平。
+
+通过外加偏置，可以得到积累、耗尽与反型几种状态。
+
+\section{阈值电压}
+
+反型的临界：表面电子浓度与内部空穴浓度相等时的外接电压。
+
+\[\frac{n_i^2}{N_A}\exp \frac{\phi_S}{k T} = N_A\] 
+
+\[\phi_S = k T 2 \log (N_A/n_i)\]
+
+那么 \[V_G = V_{ox} + \phi_S = \frac{Q_S(\phi_S)}{C_{ox}} + \phi_S\]
+
+\section{低于阈值的状态}
+
+由于空穴沿位置上升速度极快，可以看作是一个冲激函数。而积累时 \(\phi_S \approx 0\) 
+
+\[V_G = \frac{Q_S}{C_{ox}}\]
+
+激发的载流子全部存在于界面上，电压全部落在氧化层上，\(V_G \approx V_{ox} = Q_S(\phi_S)/C_{ox}\)。
+
+类似的，反型之后电子浓度也会出现急剧上升，电压的进一步上升基本都会落在 \(V_{ox}\) 上，用于能带弯曲的电压只需一小部分就可以引起极大的电荷变化。
+
+\section{小信号电容}
+
+对于积累时，宽度不变，电荷变化；而耗尽时，类似 PN 结，宽度会发生变化，而电荷保持\footnote{电离杂质}在 \(-N_A\)，是一个串联的电容；反型会增加极薄的反型层，空间电荷区基本稳定，但是反型电荷由 \(\delta\) 近似会发生变化。
+
+\[C_S = \frac{\epsilon_0 \epsilon_r}{W}, \text{ where } W \propto \sqrt{V_{bi} - V_A} \]
+
+% End Here
+
+
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
