@@ -52,6 +52,49 @@ MOS 由源极漏极栅极和衬底构成。源漏为 n 型则为 nMOS， 为 p �
 
 \[C_S = \frac{\epsilon_0 \epsilon_r}{W}, \text{ where } W \propto \sqrt{V_{bi} - V_A} \]
 
+\section{高于阈值的状态}
+
+电荷随着 \(V_G\) 线性增长，随着 \(V_{th}\) 指数增长。
+
+\[\begin{aligned}
+    V_G &= \phi_S + V_{ox}\\
+    &= \phi_S + E_{ox} x_{ox} \\
+    &= \phi_S - \frac{Q_i + Q_F}{\epsilon_r \epsilon_0} \\
+\end{aligned}\]
+
+而阈值电压满足
+
+\[\begin{aligned}
+    V_{th} &= 2 \phi_F + E_{ox} x_{ox} \\ 
+    &= 2 \phi_F - \frac{Q_i(2\phi_F)+Q_F}{\kappa_{ox} \epsilon_0}
+\end{aligned}\]
+
+\[\begin{aligned}
+    V_G - V_{th} &= (\phi_S - 2 \phi_F) - \frac{Q_i(\phi_S - Q_i(2 \phi_F))}{\kappa_{ox} \epsilon_0} x_{ox} \\
+    &\approx - \frac{Q_F(\phi_S) - Q_F(2 \phi_F)}{\kappa_{ox} \epsilon_0} x_{ox} \\
+    &= \frac{Q_i}{\epsilon_r \epsilon_0}
+\end{aligned}\] 
+
+小信号电容表示为 
+
+\[C_G = \frac{\dd{Q_{G}}}{\dd{V_{G}}}\]
+
+\[\frac{\dd{V_G}}{\dd{Q_G}} = \frac{Q_S/C_{ox}}{\dd{Q_G}} + \frac{\dd{}\phi_S}{\dd{Q_S}}\]
+
+因此 \[\frac{1}{C_G} = \frac{1}{C_{ox}} + \frac{1}{C_S}\]
+
+对于导通电流，与 \(C_G\) 有关，进一步与 \(C_{ox}\) 有关，可以将二氧化硅做薄以增加 \(C_{ox}\) 。
+
+\[I_{on} = q n v = q v V_G C_G \] 
+
+体校应因子 \(m = 1 + C_S / C_{ox}\) ，越小越好。
+
+\[\phi_S = \frac{C_)}{C_O + C_S}V_G = \frac{V_G}{m}\]
+
+亚阈值斜率 
+
+\[SS = \frac{\dd{\log _{10} I_D}}{V_G} = 60 mV/dec \times m\]
+
 % End Here
 
 
