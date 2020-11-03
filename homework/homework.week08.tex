@@ -1,0 +1,185 @@
+\documentclass[lang=cn,11pt,a4paper,cite=authoryear]{elegantpaper}
+
+\input{needed.tex}
+
+\title{微电子器件物理\quad 第八周作业}
+\author{范云潜 18373486}
+\institute{微电子学院 184111 班}
+\date{\zhtoday}
+
+\begin{document}
+
+\maketitle
+
+作业内容：
+
+\tableofcontents
+
+\part{IV 作业}
+
+\homep{选择}
+
+1) c 2) b 3) d 4) e 
+
+\homep{计算1}
+
+\subhome{a}
+
+如 \figref{01} 。
+
+\qfig[01]{h801.png}{半导体内静电势变化}
+
+\subhome{b}
+
+注意到电通量连续，因此电场有突变，如 \figref{02} 。
+
+\qfig[02]{h802.png}{电场变化}
+
+\subhome{c} 
+
+是的，因为没有电流通过。
+
+\subhome{d} 
+
+\qfig[03]{h803.png}{空穴浓度变化}
+
+\subhome{e}
+
+\[\begin{aligned}
+    p_{fb} &= n_i \exp{(E_i-E_F)/k_B T}\\
+    &= 10^{10} e^{0.51 eV / 0.026 eV} = 3.3026 \cdot 10^{18}cm^{-3} 
+\end{aligned}\]
+
+\subhome{f}
+
+\(p_{surface} = n_i = 10^{10} cm^{-3}\)
+
+\subhome{g} 
+
+\(\varphi_S = \Delta E_i = 0.51 eV\) 
+
+\subhome{h}
+
+% TODO: 交界处 E_i = E_F 
+
+\(V_G = 0\) ，因为在交界后未产生能带弯曲。
+
+\subhome{i}
+
+根据 \(E_S = \left[\dfrac{2 q N_A}{K_S \epsilon_0} \phi_S\right]^{1/2}\) ，以及电通量关系 \(E_{ox} = \dfrac{K_S}{K_O}E_S\) ，得到 \(\Delta \phi_S = E_{ox} x_o \)
+
+\[\begin{aligned}
+    \Delta \phi_S &= x_o \frac{K_S}{K_O} \sqrt{\frac{2qN_A\phi_S}{K_S \epsilon_0}} \\
+    &= \frac{x_o}{K_O \epsilon_0} \sqrt{2q N_A \phi_S K_S \epsilon_0} \\
+    &= \frac{1.1e-7}{3.9 \cdot 8.8500e-14} \\
+    &\sqrt{2 \cdot 1.6\: 10^{-16} \cdot 11.8 \cdot 8.85\: 10^{-14} \cdot 3.3 \: 10^{18} \cdot 0.51} \\
+    &=   0.23916 V
+\end{aligned}\]
+
+\homep{计算2}
+
+\subhome{a}
+
+金属半导体没有功函数差，两侧费米能级对齐没有平带电压，\(V_{FB} = 0\) 。
+
+\subhome{b} 
+
+\[V_G = \phi_S + \Delta \phi_{ox}\] 
+
+\[\Delta \phi_{ox} = E_{ox} x_o \]
+
+\[E_{ox} = \dfrac{K_S}{K_O}E_S\]
+
+\[E_S = \left[\dfrac{2 q N_A}{K_S \epsilon_0} \phi_S\right]^{1/2}\] 
+
+联立 
+
+\[\begin{aligned}
+    V_G &= \phi_S + 0.30292 \sqrt{\phi_S} = 1 \\
+    \phi_S &= 0.86^2 = 0.7396 V
+\end{aligned}\]
+
+\subhome{c and d}
+
+在 (b) 中已经计算过，\[E_S = 782733.54786 V/cm\] ，\[E_{ox} = 3.0256 E_S = 2368270.73456 V/cm\]。
+
+\subhome{e}
+
+耗尽区宽度满足
+
+\[W=\left[\frac{2 K_{\mathrm{S}} \varepsilon_{0}}{q N_{\mathrm{A}}} \phi_{\mathrm{S}}\right]^{1 / 2} = 0.0000018898 cm\] 
+
+\subhome{f}
+
+\[Q_{B}=-\sqrt{2 q \kappa_{S} \varepsilon_{0} N_{A} \phi_{s}}\]
+
+\[Q_S = Q_B =  -0.00000081741 C/cm^2\]
+
+\subhome{g}
+
+由电荷平衡 \(Q_G = 0.00000081741 C/cm^2\)
+
+\subhome{h}
+
+\[\Delta \phi_{ox} = E_{ox} x_o = 0.26051 V\]
+
+\subhome{i}
+
+\[V_{\mathrm{T}}=2 \phi_{\mathrm{F}}+\frac{K_{\mathrm{S}} x_{\mathrm{o}}}{K_{\mathrm{O}}} \sqrt{\frac{4 q N_{\mathrm{A}}}{K_{\mathrm{S}} \varepsilon_{0}} \phi_{\mathrm{F}}}\]
+
+\[\phi_F = \frac{k_B T}{q} \ln {\frac{N_A}{n_i}} =  0.50476 V\]
+
+带入： \(V_T = 2 \cdot  0.50476 + 0.30436 = 1.3139 V\) 
+
+\homep{计算3}
+
+\subhome{a}
+
+夹断之前
+
+\[I_{\mathrm{DS}}=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{L}\left[\left(V_{\mathrm{GS}}-V_{\mathrm{T}}\right) V_{\mathrm{DS}}-\frac{V_{\mathrm{DS}}^{2}}{2}\right]\]
+
+修改为
+
+\[I_{\mathrm{DS}}'=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{L}\left[\left(V_{\mathrm{GS}}'-V_{\mathrm{T}}\right) V_{\mathrm{DS}}'-\frac{V_{\mathrm{DS}}'^{2}}{2}\right]\]
+
+
+饱和后
+
+\[I_{\mathrm{Dsat}}=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{2 L}\left(V_{\mathrm{G}}-V_{\mathrm{T}}\right)^{2}\]
+
+修改为
+
+\[I_{\mathrm{Dsat}}'=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{2 L}\left(V_{\mathrm{GS}}'-V_{\mathrm{T}}\right)^{2}\]
+
+其中 \(V_{GS}' = V_{GS} - (V_S + I_{DS}' R_S)\) ， \(V_{DS}' = V_D - I_{DS}' R_D  - (V_S + I_{DS}' R_S)\)
+
+可以预见的将会修正为四次方程。
+
+\subhome{b}
+
+线性区
+
+
+\[I_{\mathrm{DS}}=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{L}\left[\left(V_{\mathrm{GS}}-V_{\mathrm{T}}\right) V_{\mathrm{DS}}\right]\]
+
+修正 
+
+\[I_{\mathrm{DS}}=\frac{Z \bar{\mu}_{\mathrm{n}} C_{\mathrm{o}}}{L}\left[\left(V_{G} - (V_S + I_{DS}' R_S)-V_{\mathrm{T}}\right)(  V_D - I_{DS}' R_D  - (V_S + I_{DS}' R_S))\right]\]
+
+显然， \(R_S\) 或者 \(R_D\) 越大，线性区电流越小。在饱和区， \(R_D \) 影响忽略，\(R_S\) 越大，电流越小。
+
+\part{非理想}
+
+
+
+
+
+
+
+% Start Here
+
+% End Here
+
+
+\end{document}

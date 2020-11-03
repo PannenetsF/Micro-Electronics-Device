@@ -1,0 +1,27 @@
+\ifx\mainclass\undefined
+\documentclass[cn,11pt,chinese,black,simple]{../elegantbook}
+\input{../needed.tex}
+\begin{document}
+\fi 
+\def\chapname{07minimos}
+
+% Start Here
+\chapter{小尺寸 MOS} 
+
+\section{电荷分享模型}
+
+\[V_{t h}=2 \phi_{F}-\frac{Q_{B}}{C_{o x}}=2 \phi_{F}+\frac{q N_{A} W_{T}}{C_{o x}}\]
+
+结区的电荷变多，有效沟道变短，阈值会进一步下降。还会造成贯通效应，沟道对晶体管失去控制。并且 \(V_{DS}\) 影响 \(V_T\) 。
+
+结的深度会影响沟道长度。沟道掺杂越低，就可以做的越来越短。栅氧越大，沟道越短。
+
+栅氧越薄，电容越大。
+
+% End Here
+
+
+\let\chapname\undefined
+\ifx\mainclass\undefined
+\end{document}
+\fi 
