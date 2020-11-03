@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  3 NOV 2020 10:08
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.9)  3 NOV 2020 14:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -853,14 +853,21 @@ File: figure/h802.png Graphic file (type bmp)
 File: figure/h803.png Graphic file (type bmp)
 <figure/h803.png>
  [2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
  (./homework.week08.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
-Package rerunfilecheck Info: File `homework.week08.out' has not changed.
-(rerunfilecheck)             Checksum: 6B5AE275A2E2D270333A22D1FDFD4FA3;87.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+
+
+Package rerunfilecheck Warning: File `homework.week08.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `homework.week08.out':
+(rerunfilecheck)             Before: 6B5AE275A2E2D270333A22D1FDFD4FA3;87
+(rerunfilecheck)             After:  8933DF139ADFC979372B96073F7E0C2F;169.
  ) 
 Here is how much of TeX's memory you used:
  21499 strings out of 479682
