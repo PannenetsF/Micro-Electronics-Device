@@ -23,19 +23,26 @@
 ## Author: pannenetsf <pannenetsf@manjaro>
 ## Created: 2020-11-30
 
-E = 0:10000:1e5;
-N = 5;
-D = 3;
+E = 0:10:1000;
+N = 7;
+D = 1;
 t_total = 1e-6;
-tau = 10.^-(1:D:(1+D*N));
+tau = 1e-10 * (1:N);
 k = tau * 0;
-subplot(2,1,1)
+eps = 1e-10;
+m0 = 9.10938356e-31;
+m_eff = 1.09*m0; % 300K Si
+q = 1.602176634e-19;
+
+subplot(3,1,1)
 for i = 1:N
   velocity = montecalo(E, tau(i), t_total);
-  plot(E, velocity);
-  k(i) = max(velocity ./ E')
+  plot(E, velocity,'o-o');
+  k(i) = mean(velocity) / mean(E+eps);
   hold on;
 endfor
 
-subplot(2,1,2)
-plot(tau, k)
+subplot(3,1,2)
+plot(tau, k,'o-o')
+subplot(3,1,3)
+plot(tau, q/m_eff*tau,'x-x')

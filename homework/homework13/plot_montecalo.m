@@ -15,33 +15,34 @@
 ## <https://www.gnu.org/licenses/>.
 
 ## -*- texinfo -*- 
-## @deftypefn {} {@var{velocity} =} montecalo (@var{E}, @var{t_total})
+## @deftypefn {} {@var{retval} =} plot_montecalo (@var{input1}, @var{input2})
 ##
 ## @seealso{}
 ## @end deftypefn
 
-## Author: pannenetsf <pannenets.f@foxmail.com>
+## Author: pannenetsf <pannenetsf@manjaro>
 ## Created: 2020-11-30
 
-function velocity = montecalo (E, tau, t_total)
-
-Tau = 1/tau;
-
+E = 0:400:1000000;
+N = 12;
+D = 2;
+t_total = 1e-6;
+tau = 1e-10 * (1:D:N);
+k = tau * 0;
+eps = 1e-10;
 m0 = 9.10938356e-31;
 m_eff = 1.09*m0; % 300K Si
 q = 1.602176634e-19;
-a = E * q / m_eff;
 
-% The integration of probality is 1.
-mean_delta_t = 1/Tau;
-num = 10 * round(t_total/mean_delta_t) + 1;
+% subplot(3,1,1)
+for i = 1:((N-1)/D)
+  velocity = montecalo(E, tau(i), t_total);
+  plot(E, velocity,'.-.');
+  k(i) = mean(velocity) / mean(E+eps);
+  hold on;
+endfor
 
-E_size = size(E,2);
-r = rand(E_size,num);
-delta_t = -log(r) / Tau;
-l = 0.5 * a' .* (delta_t.^2);
-L = sum(l,2);
-
-velocity = L ./ sum(delta_t,2);
-
-endfunction
+% subplot(3,1,2)
+% plot(tau, k,'o-o')
+% subplot(3,1,3)
+% plot(tau, q/m_eff*tau,'x-x')

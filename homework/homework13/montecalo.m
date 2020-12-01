@@ -31,14 +31,18 @@ m0 = 9.10938356e-31;
 m_eff = 1.09*m0; % 300K Si
 q = 1.602176634e-19;
 a = E * q / m_eff;
+E_ph = q;
 
 % The integration of probality is 1.
 mean_delta_t = 1/Tau;
-num = 10 * round(t_total/mean_delta_t) + 1;
+num = round(t_total/mean_delta_t) + 1;
 
 E_size = size(E,2);
 r = rand(E_size,num);
 delta_t = -log(r) / Tau;
+E_ph_delta_t = sqrt(2 * E_ph / m_eff) ./a';
+delta_t_not_overflow = delta_t < E_ph_delta_t;
+delta_t = delta_t .* delta_t_not_overflow + E_ph_delta_t .* (1 - delta_t_not_overflow);
 l = 0.5 * a' .* (delta_t.^2);
 L = sum(l,2);
 
