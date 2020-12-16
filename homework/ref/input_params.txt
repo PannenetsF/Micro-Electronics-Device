@@ -1,0 +1,46 @@
+# Created by Octave 5.2.0, Tue Dec 08 10:41:37 2020 CST <pannenetsf@manjaro>
+# name: Na
+# type: scalar
+10000000000000000
+
+
+# name: Nd
+# type: scalar
+1e+17
+
+
+# name: Vbi
+# type: scalar
+0.75260848071038677
+
+
+# name: W
+# type: scalar
+3.2942707335120649e-05
+
+
+# name: Wn
+# type: scalar
+9.9325999826439836e-06
+
+
+# name: Wp
+# type: scalar
+3.1409639032503898e-05
+
+
+# name: E_p
+# type: scalar
+151543.09687805391
+
+
+# name: Ldn
+# type: scalar
+1.3014644459845733e-06
+
+
+# name: Ldp
+# type: scalar
+4.1155919430404333e-06
+
+
