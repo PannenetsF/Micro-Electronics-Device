@@ -1,0 +1,66 @@
+\documentclass[cn,11pt,chinese,black,simple]{elegantbook}
+
+\def\mainclass{main}
+
+\title{微电子器件基础}
+
+
+\author{Pannenets.F}
+% \institute{微电子学院}
+\date{\today}
+% \version{4}
+\bioinfo{分类}{笔记}
+
+\extrainfo{Je reviendrai et je serai des millions. —— <<Spartacus>>}
+\setcounter{tocdepth}{3}
+
+\lstset{
+  mathescape = false}
+% \logo{logo-blue.png}
+\cover{logo.jpg}
+
+\input{needed.tex}
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\chapter*{特别声明}
+\markboth{Introduction}{前言}
+
+北航微电子学院在 2020 年秋季学期开设的微电子器件基础课程，课程教师为曾琅老师。
+
+% 
+
+\begin{flushright}
+Pannenets F
+\today
+\end{flushright}
+
+\tableofcontents
+%\listofchanges
+
+\mainmatter
+
+
+
+\input{chap/chap.00intro.tex}
+
+\input{chap/chap.01pnjunction.tex}
+
+\input{chap/chap.02pnjvi.tex}
+
+\input{chap/chap.03sbd.tex}
+
+\input{chap/chap.04mos.tex}
+
+\input{chap/chap.05mosiv.tex} 
+
+\input{chap/chap.06shortmos.tex}
+
+\input{chap/chap.07minimos.tex}
+
+\input{chap/chap.08bjt.tex} 
+
+\end{document}
